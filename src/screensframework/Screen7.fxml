@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen7Controller">
+   <children>
+      <TitledPane animated="false" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="202.0" text="Employee Overview">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0" />
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Luggage Information">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Profile Settings">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </TitledPane>
+      <Accordion layoutX="9.0" layoutY="254.0" prefWidth="202.0">
+         <panes>
+            <TitledPane animated="false" text="Profile Settings">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Luggage Information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="0.0" prefWidth="202.0" text="Employee Overview">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Text layoutX="10.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Version 0.0.0" />
+      <ImageView fitHeight="150.0" fitWidth="208.0" layoutX="10.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Pictures/images.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="19.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Management Area">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <ScrollBar layoutX="593.0" layoutY="104.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="18.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f0aab" height="94.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutX="10.0" layoutY="16.0" stroke="WHITE" strokeType="INSIDE" width="200.0">
+         <fill>
+            <LinearGradient endX="0.6990291262135923" endY="1.0" startX="0.6747572815533981">
+               <stops>
+                  <Stop color="#979797" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutY="6.0" stroke="WHITE" strokeType="INSIDE" width="200.0">
+               <fill>
+                  <LinearGradient endX="0.6990291262135923" endY="1.0" startX="0.6747572815533981">
+                     <stops>
+                        <Stop color="#979797" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f0aab" height="94.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <ScrollBar layoutX="583.0" layoutY="94.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="18.0" />
+            <Text fill="WHITE" layoutX="9.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Management Area">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#fcfcfc" layoutX="540.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log out" />
+            <ImageView fitHeight="150.0" fitWidth="208.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Pictures/images.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Version 0.0.0" />
+            <Accordion layoutX="-1.0" layoutY="244.0" prefWidth="202.0">
+               <panes>
+                  <TitledPane animated="false" text="Profile Settings">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Luggage Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="0.0" prefWidth="202.0" text="Employee Overview">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="10.0" layoutY="4.0" prefHeight="498.0" prefWidth="600.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="492.0" layoutY="6.0" stroke="WHITE" strokeType="INSIDE" width="200.0">
+                     <fill>
+                        <LinearGradient endX="0.6990291262135923" endY="1.0" startX="0.6747572815533981">
+                           <stops>
+                              <Stop color="#979797" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f0aab" height="94.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+                  <ScrollBar layoutX="583.0" layoutY="94.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="18.0" />
+                  <Text fill="WHITE" layoutX="9.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Management Area">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="208.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Desktop/Plaatje%20voor%20management%20area.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Version 0.0.0" />
+                  <Accordion layoutX="-1.0" layoutY="244.0" prefWidth="202.0">
+                     <panes>
+                        <TitledPane animated="false" text="Profile Settings">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Luggage Information">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="0.0" prefWidth="202.0" text="Employee Overview">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+                  <JFXButton layoutX="8.0" layoutY="42.0" onAction="#goToScreen7" prefHeight="54.0" prefWidth="121.0" text="System" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="-4.0" layoutY="428.0" onAction="#goToScreen6" text="Search Luggage" />
+                  <JFXButton layoutX="-4.0" layoutY="398.0" onAction="#goToScreen4" text="Register found Luggage" />
+                  <JFXButton layoutX="-2.0" layoutY="355.0" onAction="#goToScreen2" text="Register checked-in Luggage" />
+                  <JFXButton layoutX="-2.0" layoutY="319.0" onAction="#goToScreen5" text="Register Missing Luggage" />
+                  <JFXButton layoutX="519.0" onAction="#goToScreen7" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="201.0" layoutY="6.0" prefHeight="16.0" prefWidth="79.0" text="Screen 7" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="-4.0" layoutY="453.0" onAction="#goToScreen8" text="Dashboard" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

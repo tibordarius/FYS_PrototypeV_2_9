@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jcommon-1.0.23">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_6-be0cfc1dd0ea9d98e5105a5228c1bcf80c8d8778/dist/lib/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_6-be0cfc1dd0ea9d98e5105a5228c1bcf80c8d8778/dist/lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_6-be0cfc1dd0ea9d98e5105a5228c1bcf80c8d8778/dist/lib/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_6-be0cfc1dd0ea9d98e5105a5228c1bcf80c8d8778/dist/lib/mysql-connector-java-5.1.40-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

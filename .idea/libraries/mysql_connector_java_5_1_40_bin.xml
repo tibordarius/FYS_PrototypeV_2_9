@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.40-bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_8/mysql-connector-java-5.1.40-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_8/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../GitHub/FYS_PrototypeV_2_8/jfoenix.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
