@@ -43,36 +43,27 @@
 -->
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane id="AnchorPane" minHeight="122.0" prefHeight="336.0" prefWidth="365.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="screensframework.Screen1Controller">
-  <children>
-    <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="222.0" prefWidth="298.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-      <children>
+<AnchorPane id="AnchorPane" minHeight="122.0" prefHeight="336.0" prefWidth="365.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.60" fx:controller="screensframework.Screen1Controller">
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="222.0" prefWidth="298.0" spacing="20.0"
+          AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.topAnchor="10.0">
+        <padding>
+            <Insets/>
+        </padding>
         <Label text="Login_Terminal">
-          <font>
-            <Font size="18.0" />
-          </font>
+            <font>
+                <Font size="18.0"/>
+            </font>
         </Label>
-            <TextField promptText="Username" />
-            <PasswordField prefHeight="25.0" prefWidth="297.0" promptText="Password" />
+        <TextField promptText="Username"/>
+        <PasswordField prefHeight="25.0" prefWidth="297.0" promptText="Password"/>
         <HBox alignment="CENTER" prefHeight="75.0" prefWidth="341.0" spacing="20.0">
-          <children>
-            <Button mnemonicParsing="false" onAction="#goToScreen2" text="Login" />
-            <Button mnemonicParsing="false" onAction="#goToScreen3" text="Sign Up" />
-          </children>
+            <Button mnemonicParsing="false" onAction="#goToScreen2" text="Login"/>
+            <Button mnemonicParsing="false" onAction="#goToScreen3" text="Sign Up"/>
         </HBox>
-      </children>
-      <padding>
-        <Insets />
-      </padding>
     </VBox>
-  </children>
 </AnchorPane>

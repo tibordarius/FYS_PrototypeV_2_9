@@ -1,94 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.*?>
-<?import javafx.scene.chart.*?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen8Controller">
-   <children>
-      <Text layoutX="78.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data overview" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="49.0" layoutX="9.0" layoutY="267.0" stroke="#f2f2f2" strokeType="INSIDE" width="243.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="60.0" layoutX="10.0" layoutY="10.0" stroke="#ff4646" strokeType="INSIDE" width="240.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="60.0" layoutX="249.0" layoutY="10.0" stroke="#ff6262" strokeType="INSIDE" width="743.0" />
-      <Text fill="WHITE" layoutX="281.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Label fx:id="label" layoutX="136.0" layoutY="130.0" minHeight="16" minWidth="69" />
-      <JFXButton layoutX="24.0" layoutY="13.0" onAction="#goToScreen7" prefHeight="54.0" prefWidth="121.0" text="System" textFill="WHITE">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="65.0" layoutY="324.0" onAction="#goToScreen6" text="Search Luggage" />
-      <JFXButton layoutX="65.0" layoutY="223.0" onAction="#goToScreen4" text="Register found Luggage" />
-      <JFXButton layoutX="67.0" layoutY="180.0" onAction="#goToScreen2" text="Register checked-in Luggage" />
-      <JFXButton layoutX="67.0" layoutY="144.0" onAction="#goToScreen5" text="Register Missing Luggage" />
-      <Label layoutX="912.0" layoutY="27.0" prefHeight="16.0" prefWidth="79.0" text="Screen 8" textFill="WHITE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="7.0" layoutY="507.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="49.0" prefWidth="240.0" text="Logout" />
-      <JFXButton layoutX="65.0" layoutY="279.0" onAction="#goToScreen8" text="Dashboard" />
-      <Label layoutX="281.0" layoutY="80.0" text="Weclome user">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="158.0" layoutX="752.0" layoutY="391.0" stroke="#ff4646" strokeType="INSIDE" width="224.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f13a3a" height="158.0" layoutX="509.0" layoutY="391.0" stroke="#f13a3a" strokeType="INSIDE" width="224.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="158.0" layoutX="265.0" layoutY="391.0" stroke="#ff4646" strokeType="INSIDE" width="224.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="33.0" layoutX="752.0" layoutY="391.0" stroke="#ff6262" strokeType="INSIDE" width="224.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4d4d" height="33.0" layoutX="509.0" layoutY="391.0" stroke="#ff4d4d" strokeType="INSIDE" width="224.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7a7a" height="33.0" layoutX="265.0" layoutY="391.0" stroke="#ff7a7a" strokeType="INSIDE" width="224.0" />
-      <Circle fill="#ff4646" layoutX="864.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" />
-      <Circle fill="#f13a3a" layoutX="621.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" />
-      <Circle fill="#ff6262" layoutX="377.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" />
-      <Text fill="WHITE" layoutX="834.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="77%">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="590.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19%">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="346.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50%">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="829.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="586.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text fill="WHITE" layoutX="342.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <AreaChart layoutX="265.0" layoutY="141.0" prefHeight="226.0" prefWidth="711.0" title="Statistics">
-         <xAxis>
-            <CategoryAxis side="BOTTOM" />
-         </xAxis>
-         <yAxis>
-            <NumberAxis side="LEFT" />
-         </yAxis>
-      </AreaChart>
-   </children>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen8Controller">
+   <Text layoutX="78.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data overview"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="49.0" layoutX="9.0" layoutY="267.0" stroke="#f2f2f2"
+              strokeType="INSIDE" width="243.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="60.0" layoutX="10.0" layoutY="10.0" stroke="#ff4646"
+              strokeType="INSIDE" width="240.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="60.0" layoutX="249.0" layoutY="10.0"
+              stroke="#ff6262" strokeType="INSIDE" width="743.0"/>
+   <Text fill="WHITE" layoutX="281.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+      <font>
+         <Font size="24.0"/>
+      </font>
+   </Text>
+   <Label fx:id="label" layoutX="136.0" layoutY="130.0" minHeight="16" minWidth="69"/>
+   <JFXButton layoutX="24.0" layoutY="13.0" onAction="#goToScreen7" prefHeight="54.0" prefWidth="121.0" text="System"
+              textFill="WHITE">
+      <font>
+         <Font size="25.0"/>
+      </font>
+   </JFXButton>
+   <JFXButton layoutX="65.0" layoutY="324.0" onAction="#goToScreen6" text="Search Luggage"/>
+   <JFXButton layoutX="65.0" layoutY="223.0" onAction="#goToScreen4" text="Register found Luggage"/>
+   <JFXButton layoutX="67.0" layoutY="180.0" onAction="#goToScreen2" text="Register checked-in Luggage"/>
+   <JFXButton layoutX="67.0" layoutY="144.0" onAction="#goToScreen5" text="Register Missing Luggage"/>
+   <Label layoutX="912.0" layoutY="27.0" prefHeight="16.0" prefWidth="79.0" text="Screen 8" textFill="WHITE">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Label>
+   <Button layoutX="7.0" layoutY="507.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="49.0"
+           prefWidth="240.0" text="Logout"/>
+   <JFXButton layoutX="65.0" layoutY="279.0" onAction="#goToScreen8" text="Dashboard"/>
+   <Label layoutX="281.0" layoutY="80.0" text="Weclome user">
+      <font>
+         <Font size="35.0"/>
+      </font>
+   </Label>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="158.0" layoutX="752.0" layoutY="391.0"
+              stroke="#ff4646" strokeType="INSIDE" width="224.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f13a3a" height="158.0" layoutX="509.0" layoutY="391.0"
+              stroke="#f13a3a" strokeType="INSIDE" width="224.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="158.0" layoutX="265.0" layoutY="391.0"
+              stroke="#ff4646" strokeType="INSIDE" width="224.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="33.0" layoutX="752.0" layoutY="391.0"
+              stroke="#ff6262" strokeType="INSIDE" width="224.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4d4d" height="33.0" layoutX="509.0" layoutY="391.0"
+              stroke="#ff4d4d" strokeType="INSIDE" width="224.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7a7a" height="33.0" layoutX="265.0" layoutY="391.0"
+              stroke="#ff7a7a" strokeType="INSIDE" width="224.0"/>
+   <Circle fill="#ff4646" layoutX="864.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE"
+           strokeWidth="5.0"/>
+   <Circle fill="#f13a3a" layoutX="621.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE"
+           strokeWidth="5.0"/>
+   <Circle fill="#ff6262" layoutX="377.0" layoutY="483.0" radius="48.0" stroke="WHITE" strokeType="INSIDE"
+           strokeWidth="5.0"/>
+   <Text fill="WHITE" layoutX="834.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="77%">
+      <font>
+         <Font size="32.0"/>
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="590.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19%">
+      <font>
+         <Font size="33.0"/>
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="346.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50%">
+      <font>
+         <Font size="33.0"/>
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="829.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="586.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="342.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Text>
+   <AreaChart layoutX="265.0" layoutY="141.0" prefHeight="226.0" prefWidth="711.0" title="Statistics">
+      <xAxis>
+         <CategoryAxis side="BOTTOM"/>
+      </xAxis>
+      <yAxis>
+         <NumberAxis side="LEFT"/>
+      </yAxis>
+   </AreaChart>
 </AnchorPane>

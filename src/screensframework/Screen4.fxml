@@ -1,92 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<AnchorPane id="AnchorPane" minWidth="174.0" prefHeight="583.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen4Controller">
-   <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="60.0" layoutX="259.0" layoutY="20.0" stroke="#ff6262" strokeType="INSIDE" width="743.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="60.0" layoutX="20.0" layoutY="20.0" stroke="#ff4646" strokeType="INSIDE" width="240.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="49.0" layoutX="21.0" layoutY="181.0" stroke="#f2f2f2" strokeType="INSIDE" width="240.0" />
-      <Text fill="WHITE" layoutX="34.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Text>
-      <Button layoutX="13.0" layoutY="523.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="49.0" prefWidth="240.0" text="Logout" />
-      <Label layoutX="924.0" layoutY="24.0" prefHeight="16.0" prefWidth="79.0" text="Screen 4" textFill="WHITE">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="34.0" layoutY="242.0" onAction="#goToScreen6" text="Search Luggage" />
-      <JFXButton layoutX="35.0" layoutY="193.0" onAction="#goToScreen4" text="Register found Luggage" />
-      <JFXButton layoutX="37.0" layoutY="150.0" onAction="#goToScreen2" text="Register checked-in Luggage" />
-      <JFXButton layoutX="37.0" layoutY="114.0" onAction="#goToScreen5" text="Register Missing Luggage" />
-      <Text fill="WHITE" layoutX="275.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register found luggage" wrappingWidth="265.13671875">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Text>
-      <JFXButton layoutX="37.0" layoutY="279.0" onAction="#goToScreen8" text="Dashboard" />
-      <JFXButton layoutX="470.0" layoutY="511.0" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE" style="-fx-background-color: ff6262;" text="Cancel" />
-      <Text layoutX="291.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase brand" />
-      <Text layoutX="291.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase color" />
-      <ChoiceBox layoutX="440.0" layoutY="94.0" prefHeight="31.0" prefWidth="135.0" />
-      <ColorPicker layoutX="440.0" layoutY="143.0" prefHeight="31.0" prefWidth="97.0" />
-      <Text layoutX="291.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase weight" />
-      <TextField layoutX="441.0" layoutY="189.0" prefHeight="35.0" prefWidth="57.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <Text layoutX="291.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length" />
-      <Text layoutX="291.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width" />
-      <Text layoutX="291.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special feature" />
-      <Text layoutX="291.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />
-      <TextField layoutX="441.0" layoutY="234.0" prefHeight="35.0" prefWidth="57.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="441.0" layoutY="281.0" prefHeight="35.0" prefWidth="57.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="441.0" layoutY="329.0" prefHeight="35.0" prefWidth="57.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="441.0" layoutY="373.0" prefHeight="75.0" prefWidth="211.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <Text layoutX="508.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg" />
-      <Text layoutX="508.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm" />
-      <Text layoutX="508.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm" />
-      <Text layoutX="508.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm" />
-      <TextField layoutX="441.0" layoutY="458.0" prefHeight="35.0" prefWidth="211.0">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <Text layoutX="291.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flightnumber" />
-      <JFXButton layoutX="287.0" layoutY="511.0" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE" style="-fx-background-color: ff6262;" text="Register" />
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" minWidth="174.0" prefHeight="583.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen4Controller">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6262" height="60.0" layoutX="259.0" layoutY="20.0"
+               stroke="#ff6262" strokeType="INSIDE" width="743.0"/>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4646" height="60.0" layoutX="20.0" layoutY="20.0"
+               stroke="#ff4646" strokeType="INSIDE" width="240.0"/>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="49.0" layoutX="21.0" layoutY="181.0"
+               stroke="#f2f2f2" strokeType="INSIDE" width="240.0"/>
+    <Text fill="WHITE" layoutX="34.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System">
+        <font>
+          <Font size="25.0"/>
+        </font>
+    </Text>
+    <Button layoutX="13.0" layoutY="523.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="49.0"
+            prefWidth="240.0" text="Logout"/>
+    <Label layoutX="924.0" layoutY="24.0" prefHeight="16.0" prefWidth="79.0" text="Screen 4" textFill="WHITE">
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </Label>
+    <JFXButton layoutX="34.0" layoutY="242.0" onAction="#goToScreen6" text="Search Luggage"/>
+    <JFXButton layoutX="35.0" layoutY="193.0" onAction="#goToScreen4" text="Register found Luggage"/>
+    <JFXButton layoutX="37.0" layoutY="150.0" onAction="#goToScreen2" text="Register checked-in Luggage"/>
+    <JFXButton layoutX="37.0" layoutY="114.0" onAction="#goToScreen5" text="Register Missing Luggage"/>
+    <Text fill="WHITE" layoutX="275.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Register found luggage" wrappingWidth="265.13671875">
+        <font>
+          <Font size="25.0"/>
+        </font>
+    </Text>
+    <JFXButton layoutX="37.0" layoutY="279.0" onAction="#goToScreen8" text="Dashboard"/>
+    <JFXButton layoutX="470.0" layoutY="511.0" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE"
+               style="-fx-background-color: ff6262;" text="Cancel"/>
+    <Text layoutX="291.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase brand"/>
+    <Text layoutX="291.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase color"/>
+    <ChoiceBox layoutX="440.0" layoutY="94.0" prefHeight="31.0" prefWidth="135.0"/>
+    <ColorPicker layoutX="440.0" layoutY="143.0" prefHeight="31.0" prefWidth="97.0"/>
+    <Text layoutX="291.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suitcase weight"/>
+    <TextField layoutX="441.0" layoutY="189.0" prefHeight="35.0" prefWidth="57.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <Text layoutX="291.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length"/>
+    <Text layoutX="291.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width"/>
+    <Text layoutX="291.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special feature"/>
+    <Text layoutX="291.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height"/>
+    <TextField layoutX="441.0" layoutY="234.0" prefHeight="35.0" prefWidth="57.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <TextField layoutX="441.0" layoutY="281.0" prefHeight="35.0" prefWidth="57.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <TextField layoutX="441.0" layoutY="329.0" prefHeight="35.0" prefWidth="57.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <TextField layoutX="441.0" layoutY="373.0" prefHeight="75.0" prefWidth="211.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <Text layoutX="508.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg"/>
+    <Text layoutX="508.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm"/>
+    <Text layoutX="508.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm"/>
+    <Text layoutX="508.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm"/>
+    <TextField layoutX="441.0" layoutY="458.0" prefHeight="35.0" prefWidth="211.0">
+        <font>
+          <Font size="10.0"/>
+        </font>
+    </TextField>
+    <Text layoutX="291.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flightnumber"/>
+    <JFXButton layoutX="287.0" layoutY="511.0" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE"
+               style="-fx-background-color: ff6262;" text="Register"/>
 </AnchorPane>

@@ -5,7 +5,6 @@
  */
 package screensframework;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,12 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 /**
@@ -32,23 +27,23 @@ public class Screen6Controller implements Initializable, ControlledScreen {
     @FXML
     private Label label;
     @FXML
-    private TableView<LuggageDetails> tablekoffers;
+    private TableView<LuggageDetailsKoffers> tablekoffers;
     @FXML
-    private TableColumn<LuggageDetails, String> columnidKoffers;
+    private TableColumn<LuggageDetailsKoffers, String> columnidKoffers;
     @FXML
-    private TableColumn<LuggageDetails, String> columnGewicht;
+    private TableColumn<LuggageDetailsKoffers, String> columnGewicht;
     @FXML
-    private TableColumn<LuggageDetails, String> columnKleur;
+    private TableColumn<LuggageDetailsKoffers, String> columnKleur;
     @FXML
-    private TableColumn<LuggageDetails, String> columnVorm;
+    private TableColumn<LuggageDetailsKoffers, String> columnVorm;
     @FXML
-    private TableColumn<LuggageDetails, String> columnMerk;
+    private TableColumn<LuggageDetailsKoffers, String> columnMerk;
     @FXML
-    private TableColumn<LuggageDetails, String> columnPassagiers_idPassagiers;
+    private TableColumn<LuggageDetailsKoffers, String> columnPassagiers_idPassagiers;
     @FXML
     private Button btnLoad;
     //Initialize observable list to hold out database data
-    private ObservableList<LuggageDetails> data;
+    private ObservableList<LuggageDetailsKoffers> data;
     private DbConnection dc;
 
     ScreensController myController;
@@ -65,36 +60,7 @@ public class Screen6Controller implements Initializable, ControlledScreen {
 
     }
 
-    @FXML
 
-    public void loadDataFromDatabase(ActionEvent actionEvent) {
-        try {
-            Connection conn = dc.Connect();
-            data = FXCollections.observableArrayList();
-            // Execute query and store result in a resultset
-            ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM koffers");
-            while (rs.next()) {
-                //get string from db,whichever way 
-                data.add(new LuggageDetails(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
-            }
-
-        } catch (SQLException ex) {
-            System.err.println("Error" + ex);
-        }
-
-        //Set cell value factory to tableview.
-        //NB.PropertyValue Factory must be the same with the one set in model class.
-        columnidKoffers.setCellValueFactory(new PropertyValueFactory<>("idKoffers"));
-        columnGewicht.setCellValueFactory(new PropertyValueFactory<>("Gewicht"));
-        columnKleur.setCellValueFactory(new PropertyValueFactory<>("Kleur"));
-        columnVorm.setCellValueFactory(new PropertyValueFactory<>("Vorm"));
-        columnMerk.setCellValueFactory(new PropertyValueFactory<>("Merk"));
-        columnPassagiers_idPassagiers.setCellValueFactory(new PropertyValueFactory<>("Passagiers_idPassagiers"));
-
-        tablekoffers.setItems(null);
-        tablekoffers.setItems(data);
-
-    }
 
     /**
      *

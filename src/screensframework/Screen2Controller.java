@@ -60,7 +60,7 @@ import java.util.ResourceBundle;
 /**
  * FXML Controller class
  *
- * @author Angie
+ * @author Tibor
  */
 public class Screen2Controller implements Initializable, ControlledScreen {
 
@@ -74,24 +74,43 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     @FXML
     private Label label;
     @FXML
-    private TableView<LuggageDetails> tablekoffers;
+    private TableView<LuggageDetailsKoffers> tablekoffers;
     @FXML
-    private TableColumn<LuggageDetails, String> columnidKoffers;
+    private TableColumn<LuggageDetailsKoffers, String> columnidKoffers;
     @FXML
-    private TableColumn<LuggageDetails, String> columnGewicht;
+    private TableColumn<LuggageDetailsKoffers, String> columnGewicht;
     @FXML
-    private TableColumn<LuggageDetails, String> columnKleur;
+    private TableColumn<LuggageDetailsKoffers, String> columnKleur;
     @FXML
-    private TableColumn<LuggageDetails, String> columnVorm;
+    private TableColumn<LuggageDetailsKoffers, String> columnVorm;
     @FXML
-    private TableColumn<LuggageDetails, String> columnMerk;
+    private TableColumn<LuggageDetailsKoffers, String> columnMerk;
     @FXML
-    private TableColumn<LuggageDetails, String> columnPassagiers_idPassagiers;
+    private TableColumn<LuggageDetailsKoffers, String> columnPassagiers_idPassagiers;
     @FXML
     private Button btnLoad;
-    //Initialize observable list to hold out database data
-    private ObservableList<LuggageDetails> data;
+    //Initialize observable list to hold out database dataKoffers
+    private ObservableList<LuggageDetailsKoffers> data;
     private DbConnection dc;
+
+    @FXML
+    private Label labelPassagiers;
+    // idPassagiers, Naam, Geboortedatum, Vluchten_VluchtNummer
+    @FXML
+    private TableView<LuggageDetailsPassagiers> tablepassagiers;
+    @FXML
+    private TableColumn<LuggageDetailsPassagiers, String> columnidPassagiers;
+    @FXML
+    private TableColumn<LuggageDetailsPassagiers, String> columnNaam;
+    @FXML
+    private TableColumn<LuggageDetailsPassagiers, String> columnGeboortedatum;
+    @FXML
+    private TableColumn<LuggageDetailsPassagiers, String> columnVluchten_VluchtNummer;
+    @FXML
+    private Button btnLoadPassagiers;
+    //Initialize observable list to hold out database dataKoffers
+    private ObservableList<LuggageDetailsPassagiers> dataPassagiers;
+    private DbConnection dcPassagiers;
 
     ScreensController myController;
 
@@ -104,12 +123,15 @@ public class Screen2Controller implements Initializable, ControlledScreen {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         dc = new DbConnection();
+        dcPassagiers = new DbConnection();
+
+
 
     }
 
     @FXML
 
-    public void loadDataFromDatabase(ActionEvent actionEvent) {
+    public void loadDataFromDatabaseKoffers(ActionEvent actionEvent) {
         try {
             Connection conn = dc.Connect();
             data = FXCollections.observableArrayList();
@@ -117,7 +139,7 @@ public class Screen2Controller implements Initializable, ControlledScreen {
             ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM koffers");
             while (rs.next()) {
                 //get string from db,whichever way
-                data.add(new LuggageDetails(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
+                data.add(new LuggageDetailsKoffers(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
             }
 
         } catch (SQLException ex) {
@@ -126,15 +148,45 @@ public class Screen2Controller implements Initializable, ControlledScreen {
 
         //Set cell value factory to tableview.
         //NB.PropertyValue Factory must be the same with the one set in model class.
-        columnidKoffers.setCellValueFactory(new PropertyValueFactory<>("idKoffers"));
-        columnGewicht.setCellValueFactory(new PropertyValueFactory<>("Gewicht"));
-        columnKleur.setCellValueFactory(new PropertyValueFactory<>("Kleur"));
-        columnVorm.setCellValueFactory(new PropertyValueFactory<>("Vorm"));
-        columnMerk.setCellValueFactory(new PropertyValueFactory<>("Merk"));
-        columnPassagiers_idPassagiers.setCellValueFactory(new PropertyValueFactory<>("Passagiers_idPassagiers"));
+        columnidKoffers.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("idKoffers"));
+        columnGewicht.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("Gewicht"));
+        columnKleur.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("Kleur"));
+        columnVorm.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("Vorm"));
+        columnMerk.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("Merk"));
+        columnPassagiers_idPassagiers.setCellValueFactory(new PropertyValueFactory<LuggageDetailsKoffers, String>("Passagiers_idPassagiers"));
 
         tablekoffers.setItems(null);
         tablekoffers.setItems(data);
+
+    }
+
+    @FXML
+
+    public void loadDataFromDatabasePassagiers(ActionEvent actionEvent) {
+        try {
+            Connection conn = dcPassagiers.Connect();
+            dataPassagiers = FXCollections.observableArrayList();
+            // Execute query and store result in a resultset
+            ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM passagiers");
+            while (rs.next()) {
+                //get string from db,whichever way
+                dataPassagiers.add(new LuggageDetailsPassagiers(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+            }
+
+        } catch (SQLException ex) {
+            System.err.println("Error" + ex);
+        }
+
+        // idPassagiers, Naam, Geboortedatum, Vluchten_VluchtNummer
+        //Set cell value factory to tableview.
+        //NB.PropertyValue Factory must be the same with the one set in model class.
+        columnidPassagiers.setCellValueFactory(new PropertyValueFactory<LuggageDetailsPassagiers, String>("idPassagiers"));
+        columnNaam.setCellValueFactory(new PropertyValueFactory<LuggageDetailsPassagiers, String>("Naam"));
+        columnGeboortedatum.setCellValueFactory(new PropertyValueFactory<LuggageDetailsPassagiers, String>("Geboortedatum"));
+        columnVluchten_VluchtNummer.setCellValueFactory(new PropertyValueFactory<LuggageDetailsPassagiers, String>("Vluchten_VluchtNummer"));
+
+        tablepassagiers.setItems(null);
+        tablepassagiers.setItems(dataPassagiers);
 
     }
 
